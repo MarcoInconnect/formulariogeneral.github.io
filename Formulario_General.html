@@ -1,0 +1,177 @@
+<!-- Change or deletion of the name attributes in the input tag will lead to empty values on record submission-->
+<div id="ZohoForm">
+<style>
+    #formulario {
+        border-style: solid;
+        border-width: 2px;
+        border-color: #F6F7FA;
+        border-radius: 3%;
+        width: max-content;
+        height: auto;
+        background-color: #F6F7FA;
+        color: #3A3B3E;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px;
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-bottom: 20px;
+        align-items: start;
+    }
+
+    form #entrada {
+        align-items: end;
+    }
+
+    label {
+        color: black;
+        margin-left: 12px;
+        margin-top: 2px;
+        margin-bottom: 5px;
+    }
+
+    #campo {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    button {
+        display: block;
+        margin: 0 auto;
+        padding: 7px 35px;
+        background-color: #EC0000;
+        color: #fff;
+        border: none;
+        border-radius: 75px;
+        font-size: 15   px;
+        cursor: pointer;
+        margin-top: 5px;
+    }
+
+    input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 15px;
+        font-size: 16px;
+        width: 300px;
+        height: 30px;
+    }
+
+
+
+    input:focus {
+        background-color: white;
+        border-color: #ccc;
+    }
+</style>
+<div id="formulario">
+    <form
+        action='https://forms.zohopublic.com/inconnect/form/Formlandinggeneral/formperma/Uo7eTtaOxAtzWFfwnNUyTB6qL_dg8_tuN80i-SBlWK8/htmlRecords/submit'
+        name='form' id='form' method='POST' accept-charset='UTF-8' enctype='multipart/form-data'>
+        <input type="hidden" name="zf_referrer_name"
+            value=""><!-- To Track referrals , place the referrer name within the " " in the above hidden input field -->
+        <input type="hidden" name="zf_redirect_url"
+            value=""><!-- To redirect to a specific page after record submission , place the respective url within the " " in the above hidden input field -->
+        <input type="hidden" name="zc_gad"
+            value=""><!-- If GCLID is enabled in Zoho CRM Integration, click details of AdWords Ads will be pushed to Zoho CRM -->
+        <input type="hidden" name="utm_source" value="" />
+        <input type="hidden" name="utm_medium" value="" />
+        <input type="hidden" name="utm_campaign" value="" />
+        <input type="hidden" name="utm_term" value="" />
+        <input type="hidden" name="utm_content" value="" />
+
+
+        <script type="text/javascript">
+            // Función para obtener parámetros de la URL
+            function getUrlParameter(name) {
+                name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+                var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+                var results = regex.exec(location.search);
+                return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+            }
+
+            // Obtener el valor de utm_source de la URL
+            var utm_source = getUrlParameter('utm_source');
+            var utm_medium = getUrlParameter('utm_medium');
+            var utm_campaign = getUrlParameter('utm_campaign');
+            var utm_id = getUrlParameter('utm_id');
+            var utm_term = getUrlParameter('utm_term');
+            var utm_content = getUrlParameter('utm_content');
+
+            
+            window.onload = function () {
+                var inputUtmSource = document.querySelector('input[name="SingleLine6"]');
+                if (inputUtmSource) {
+                    inputUtmSource.value = utm_source || ''; 
+                }
+
+                var inputUtmSource = document.querySelector('input[name="SingleLine7"]');
+                if (inputUtmSource) {
+                    inputUtmSource.value = utm_medium || ''; 
+                }
+
+                var inputUtmSource = document.querySelector('input[name="SingleLine8"]');
+                if (inputUtmSource) {
+                    inputUtmSource.value = utm_campaign || '';
+                }
+
+                var inputUtmSource = document.querySelector('input[name="SingleLine9"]');
+                if (inputUtmSource) {
+                    inputUtmSource.value = utm_id || ''; 
+                }
+
+                var inputUtmSource = document.querySelector('input[name="SingleLine10"]');
+                if (inputUtmSource) {
+                    inputUtmSource.value = utm_term || ''; 
+                }
+
+                var inputUtmSource = document.querySelector('input[name="SingleLine11"]');
+                if (inputUtmSource) {
+                    inputUtmSource.value = utm_content || '';
+                }
+            };
+        </script>
+        <!--Single Line-->
+        <div id="campo">
+            <label>
+                Nombre y Apellido
+                <em style="color: #EC0000;">*</em>
+            </label>
+            <input type="text" name="SingleLine" value="" fieldType=1 maxlength="255" placeholder="" id="entrada"
+                required />
+        </div>
+        <!--Phone-->
+        <div id="campo">
+            <label> Telefono
+                <em style="color: #EC0000;">*</em>
+            </label>
+            <input type="text" compname="PhoneNumber" name="PhoneNumber_countrycode" phoneFormat="1"
+                isCountryCodeEnabled=false maxlength="10" value="" fieldType=11 placeholder="" id="entrada" pattern="[0-9]{10}" required />
+
+        </div>
+        <!--Email-->
+        <div id="campo">
+            <label> Email
+            </label>
+            <input type="email" maxlength="255" name="Email" value="" fieldType=9 placeholder="" required id="entrada" />
+        </div>
+        <input type="hidden" name="SingleLine6" value="" fieldType=1 maxlength="255" placeholder="1" />
+
+        <input type="hidden" name="SingleLine7" value="" fieldType=1 maxlength="255" placeholder="2" />
+
+        <input type="hidden" name="SingleLine8" value="" fieldType=1 maxlength="255" placeholder="3" />
+
+        <input type="hidden" name="SingleLine9" value="" fieldType=1 maxlength="255" placeholder="4" />
+
+        <input type="hidden" name="SingleLine10" value="" fieldType=1 maxlength="255" placeholder="5" />
+
+        <input type="hidden" name="SingleLine11" value="" fieldType=1 maxlength="255" placeholder="6" />
+
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+</div>
